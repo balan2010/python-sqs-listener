@@ -14,8 +14,6 @@ class SqsListener(object):
     __metaclass__ = ABCMeta
 
     def __init__(self, queue, **kwargs):
-        if not os.environ.get('AWS_ACCOUNT_ID', None):
-            raise EnvironmentError('Environment variable `AWS_ACCOUNT_ID` not set')
         self._queue_name = None
         self._poll_interval = kwargs["interval"] if 'interval' in kwargs else 60
         self._queue_visibility_timeout = kwargs['visibility_timeout'] if 'visibility_timeout' in kwargs else '600'
