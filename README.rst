@@ -7,7 +7,7 @@ queue, as well as sending messages to a queue.  Thanks to @eligro91, the package
 Installation
 ~~~~~~~~~~~~
 
-``pip install pySqsListener``
+``pip install awsPySqsListener``
 
 Listening to a queue
 ~~~~~~~~~~~~~~~~~~~~
